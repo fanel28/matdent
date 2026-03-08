@@ -27,6 +27,9 @@ export default function Footer() {
                 <Link href="/" className="hover:text-[#D6B975]">Acasă</Link>
               </li>
               <li>
+                <Link href="/preturi" className="hover:text-[#D6B975]">Prețuri</Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-[#D6B975]">Contact</Link>
               </li>
               <li>
