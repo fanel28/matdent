@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 const homepageImages = [
-  "/homepage/pexels-cedric-fauntleroy-4269274.jpg",
-  "/homepage/pexels-fr3nks-287237.jpg",
-  "/homepage/pexels-fr3nks-305568.jpg",
-  "/homepage/pexels-karola-g-6627703.jpg",
-  "/homepage/pexels-pixabay-208474.jpg",
-  "/homepage/pexels-shvetsa-3845759.jpg",
-  "/homepage/pexels-shvetsa-3845841.jpg",
+  "/homepage/WhatsApp Image 2026-03-09 at 16.00.02.jpeg",
+  "/homepage/WhatsApp Image 2026-03-09 at 16.00.02 (1).jpeg",
+  "/homepage/WhatsApp Image 2026-03-09 at 16.00.02 (2).jpeg",
+  "/homepage/WhatsApp Image 2026-03-09 at 16.00.02 (3).jpeg",
+  "/homepage/WhatsApp Image 2026-03-09 at 16.00.02 (5).jpeg",
+  "/homepage/WhatsApp Image 2026-03-09 at 16.00.02 (6).jpeg",
+  "/homepage/WhatsApp Image 2026-03-10 at 13.54.48.jpeg",
 ];
 
 export default function Carousel() {
