@@ -9,7 +9,7 @@ const HOMEPAGE_IMAGES = [
   "/homepage/WhatsApp Image 2026-03-09 at 16.00.02 (3).jpeg",
   "/homepage/WhatsApp Image 2026-03-09 at 16.00.02 (5).jpeg",
   "/homepage/WhatsApp Image 2026-03-09 at 16.00.02 (6).jpeg",
-  "/homepage/WhatsApp Image 2026-03-10 at 13.54.48.jpeg",
+  "/homepage/WhatsApp Image 2026-03-10 at 13.54.48.jpeg", 
 ];
 
 export default function Home() {
