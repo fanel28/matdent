@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://matdentclinique.ro";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://matdentclinique.com";
 export const CLINIC_NAME = "MatDent Clinique";
 export const CITY = "Craiova";
 export const PHONE_DISPLAY = "0731 188 600";
