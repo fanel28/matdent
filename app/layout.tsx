@@ -17,19 +17,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = buildMetadata({
-  title: "MatDent Clinique | Dentist in Craiova",
-  description:
-    "MatDent Clinique este o clinica dentara in Craiova cu servicii complete de stomatologie, de la preventie la implantologie si estetica dentara.",
-  path: "/",
-  keywords: [
-    "dentist in Craiova",
-    "clinica dentara in Craiova",
-    "stomatologie Craiova",
-    "implant dentar Craiova",
-    "albire dentara Craiova",
-  ],
-});
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: "MatDent Clinique | Dentist in Craiova",
+    description:
+      "MatDent Clinique este o clinica dentara in Craiova cu servicii complete de stomatologie, de la preventie la implantologie si estetica dentara.",
+    path: "/",
+    keywords: [
+      "dentist in Craiova",
+      "clinica dentara in Craiova",
+      "stomatologie Craiova",
+      "implant dentar Craiova",
+      "albire dentara Craiova",
+    ],
+  }),
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+};
 
 export default function RootLayout({
   children,
