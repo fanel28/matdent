@@ -1,3 +1,5 @@
+import { buildMetadata, CITY } from "../lib/seo";
+
 const priceCategories = [
   {
     name: "Consultație",
@@ -182,11 +184,13 @@ const priceCategories = [
   },
 ];
 
-export const metadata = {
-  title: "Prețuri | MatDent Clinique",
+export const metadata = buildMetadata({
+  title: `Preturi servicii stomatologice in ${CITY} | MatDent Clinique`,
   description:
-    "Lista de prețuri pentru serviciile stomatologice MatDent Clinique Craiova.",
-};
+    "Lista orientativa de preturi pentru servicii stomatologice la MatDent Clinique, clinica dentara in Craiova.",
+  path: "/preturi",
+  keywords: ["preturi dentist Craiova", "clinica dentara in Craiova", "cost implant dentar Craiova"],
+});
 
 export default function PreturiPage() {
   return (

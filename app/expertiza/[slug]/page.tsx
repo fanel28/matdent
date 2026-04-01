@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { buildMetadata, CITY } from "../../lib/seo";
 
 const disciplines: Record<
   string,
@@ -51,6 +52,30 @@ export async function generateStaticParams() {
   return Object.keys(disciplines).map((slug) => ({ slug }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const discipline = disciplines[slug];
+
+  if (!discipline) {
+    return buildMetadata({
+      title: "Serviciu stomatologic | MatDent Clinique",
+      description: "Detalii despre serviciile stomatologice MatDent Clinique.",
+      path: "/expertiza",
+    });
+  }
+
+  return buildMetadata({
+    title: `${discipline.title} in ${CITY} | MatDent Clinique`,
+    description: `${discipline.title} la MatDent Clinique, clinica dentara in ${CITY}.`,
+    path: `/expertiza/${slug}`,
+    keywords: [`${discipline.title} ${CITY}`, `dentist in ${CITY}`, `clinica dentara in ${CITY}`],
+  });
+}
+
 export default async function DisciplinePage({
   params,
 }: {
@@ -68,6 +93,13 @@ export default async function DisciplinePage({
       </h1>
       <p className="text-lg leading-relaxed text-stone-700">
         {discipline.description}
+      </p>
+      <h2 className="mt-8 text-2xl font-semibold text-stone-800">
+        De ce sa alegi {discipline.title.toLowerCase()} la MatDent?
+      </h2>
+      <p className="mt-3 text-stone-700">
+        Oferim evaluare corecta, plan de tratament personalizat si monitorizare pe
+        termen lung pentru rezultate stabile.
       </p>
       <div className="mt-10 text-center">
         <Link

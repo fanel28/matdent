@@ -1,7 +1,10 @@
-export const metadata = {
-  title: "Politica de confidențialitate | MatDent Clinique",
-  description: "Politica de confidențialitate și prelucrarea datelor personale la MatDent Clinique.",
-};
+import { buildMetadata } from "../lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Politica de confidentialitate | MatDent Clinique",
+  description: "Politica de confidentialitate si prelucrarea datelor personale la MatDent Clinique.",
+  path: "/confidentialitate",
+});
 
 export default function ConfidentialitatePage() {
   return (

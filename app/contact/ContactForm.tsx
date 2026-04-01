@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { PHONE_DISPLAY } from "../lib/seo";
 
 const formAction = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || "https://formspree.io/f/mykngpgo";
 
@@ -38,7 +39,7 @@ export default function ContactForm() {
         Completează formularul, iar echipa noastră te va contacta rapid pentru confirmarea vizitei.
         <br />
         <span className="font-medium">Pentru urgențe, sună direct la </span>
-        <a href="tel:0731188600" className="text-[#D6B975] hover:underline">0731188600</a>.
+        <a href="tel:0731188600" className="text-[#D6B975] hover:underline">{PHONE_DISPLAY}</a>.
       </p>
 
       {submitted ? (

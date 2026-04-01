@@ -1,6 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
-import Carousel from "./components/Carousel";
+import dynamic from "next/dynamic";
+import { buildMetadata, CITY } from "./lib/seo";
+
+const Carousel = dynamic(() => import("./components/Carousel"), {
+  loading: () => (
+    <div className="h-[320px] w-full animate-pulse rounded-2xl bg-stone-100 sm:h-[400px] md:h-[480px]" />
+  ),
+});
+
+export const metadata = buildMetadata({
+  title: `Dentist in ${CITY} | MatDent Clinique`,
+  description:
+    "Cauti un dentist in Craiova? MatDent Clinique este clinica dentara in Craiova cu servicii moderne, medici dedicati si tratamente personalizate.",
+  path: "/",
+  keywords: [
+    "dentist in Craiova",
+    "dental clinic in Craiova",
+    "clinica dentara Craiova",
+    "consult stomatologic Craiova",
+  ],
+});
 
 const HOMEPAGE_IMAGES = [
   "/homepage/WhatsApp Image 2026-03-09 at 16.00.02.jpeg",
@@ -13,18 +33,25 @@ const HOMEPAGE_IMAGES = [
 ];
 
 export default function Home() {
-  const heroImage = HOMEPAGE_IMAGES[2]; // alegem una pentru hero
+  const heroImage = HOMEPAGE_IMAGES[2];
 
   return (
     <div>
       {/* Secțiune intro + carousel */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16"> 
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
+          <h1 className="text-4xl font-semibold text-stone-800 sm:text-5xl">
+            Clinica dentara in Craiova pentru zambete sanatoase
+          </h1>
           <p className="mx-auto max-w-3xl text-lg leading-relaxed text-stone-700">
-            La <strong className="text-[#D6B975]">MatDent Clinique</strong>, credem că stomatologia înseamnă mai mult decât tehnologie și proceduri – înseamnă grijă, respect și atenție autentică față de fiecare pacient. Clinica noastră, nou deschisă în Craiova, a fost creată ca un spațiu modern și elegant, în care confortul și siguranța pacientului sunt prioritare.
+            La <strong className="text-[#D6B975]">MatDent Clinique</strong>, credem
+            ca stomatologia inseamna mai mult decat proceduri. Oferim servicii
+            complete pentru pacientii care cauta un dentist in Craiova intr-un
+            spatiu modern, sigur si prietenos.
           </p>
           <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-stone-700">
-            Ne dedicăm timp pentru a înțelege nevoile fiecărei persoane și pentru a oferi o experiență calmă, clară și lipsită de stres. Prin profesionalism, empatie și comunicare deschisă, construim relații bazate pe încredere, pentru zâmbete sănătoase pe termen lung.
+            Ne dedicam timp pentru a intelege nevoile fiecarui pacient si pentru
+            a oferi o experienta calma, clara si fara stres.
           </p>
         </div>
 
@@ -51,10 +78,11 @@ export default function Home() {
         <div className="relative h-[420px] overflow-hidden rounded-2xl sm:h-[500px]">
           <Image
             src={heroImage}
-            alt="MatDent"
+            alt="Cabinet modern MatDent Clinique din Craiova"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 1024px"
+            priority
           />
           <div className="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center px-6 text-center text-white">
             <blockquote className="text-2xl font-medium sm:text-3xl md:text-4xl">
@@ -64,6 +92,24 @@ export default function Home() {
               Fie că este vorba despre prevenție, estetică sau tratamente complexe, suntem alături de tine la fiecare pas.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <h2 className="text-3xl font-semibold text-stone-800">Servicii populare</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <Link href="/servicii/albire-dentara" className="rounded-xl border border-stone-200 p-5 hover:border-[#D6B975]">
+            <h3 className="text-xl font-semibold text-stone-800">Albire dentara</h3>
+            <p className="mt-2 text-stone-600">Reda luminozitatea zambetului prin tratamente profesionale sigure.</p>
+          </Link>
+          <Link href="/servicii/implanturi-dentare" className="rounded-xl border border-stone-200 p-5 hover:border-[#D6B975]">
+            <h3 className="text-xl font-semibold text-stone-800">Implanturi dentare</h3>
+            <p className="mt-2 text-stone-600">Solutii durabile pentru inlocuirea dintilor lipsa si functionalitate completa.</p>
+          </Link>
+          <Link href="/servicii/aparat-dentar" className="rounded-xl border border-stone-200 p-5 hover:border-[#D6B975]">
+            <h3 className="text-xl font-semibold text-stone-800">Aparat dentar</h3>
+            <p className="mt-2 text-stone-600">Corectarea alinierii dintilor pentru sanatate si estetica pe termen lung.</p>
+          </Link>
         </div>
       </section>
     </div>

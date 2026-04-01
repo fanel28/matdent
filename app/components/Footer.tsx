@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PHONE_DISPLAY } from "../lib/seo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,7 +18,7 @@ export default function Footer() {
             <h3 className="mb-3 font-semibold text-white">Contact</h3>
             <p className="text-sm">Str. Mihai Viteazul, nr. 3, bl. 5, Craiova</p>
             <a href="tel:0731188600" className="text-sm text-[#D6B975] hover:underline">
-              0731 188 600
+              {PHONE_DISPLAY}
             </a>
           </div>
           <div>
@@ -25,6 +26,12 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="hover:text-[#D6B975]">Acasă</Link>
+              </li>
+              <li>
+                <Link href="/despre" className="hover:text-[#D6B975]">Despre</Link>
+              </li>
+              <li>
+                <Link href="/servicii" className="hover:text-[#D6B975]">Servicii</Link>
               </li>
               <li>
                 <Link href="/preturi" className="hover:text-[#D6B975]">Prețuri</Link>

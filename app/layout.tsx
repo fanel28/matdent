@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import JsonLd from "./components/seo/JsonLd";
+import { buildMetadata } from "./lib/seo";
+import { localBusinessSchema, organizationSchema } from "./lib/schemas";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,11 +17,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "MatDent Clinique | Stomatologie Craiova",
+export const metadata: Metadata = buildMetadata({
+  title: "MatDent Clinique | Dentist in Craiova",
   description:
-    "Clinica stomatologică MatDent în Craiova. Grijă, respect și atenție autentică. Programează o consultație.",
-};
+    "MatDent Clinique este o clinica dentara in Craiova cu servicii complete de stomatologie, de la preventie la implantologie si estetica dentara.",
+  path: "/",
+  keywords: [
+    "dentist in Craiova",
+    "clinica dentara in Craiova",
+    "stomatologie Craiova",
+    "implant dentar Craiova",
+    "albire dentara Craiova",
+  ],
+});
 
 export default function RootLayout({
   children,
@@ -28,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}>
+        <JsonLd data={[organizationSchema, localBusinessSchema]} />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
