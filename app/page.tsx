@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div>
       {/* Secțiune intro + carousel */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16"> 
         <div className="mb-10 text-center">
           <p className="mx-auto max-w-3xl text-lg leading-relaxed text-stone-700">
             La <strong className="text-[#D6B975]">MatDent Clinique</strong>, credem că stomatologia înseamnă mai mult decât tehnologie și proceduri – înseamnă grijă, respect și atenție autentică față de fiecare pacient. Clinica noastră, nou deschisă în Craiova, a fost creată ca un spațiu modern și elegant, în care confortul și siguranța pacientului sunt prioritare.
