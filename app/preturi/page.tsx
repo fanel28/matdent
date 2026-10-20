@@ -18,12 +18,12 @@ const priceCategories = [
       {
         nr: 2,
         denumire: "Fațetă dentară Emax (zâmbet natural, sigur și durabil)",
-        cost: "2.100 lei",
+        cost: "1.500 lei",
       },
       {
         nr: 3,
         denumire: "Albire dentară profesională",
-        cost: "1.200 lei",
+        cost: "900 lei",
       },
     ],
   },
@@ -69,17 +69,17 @@ const priceCategories = [
       {
         nr: 10,
         denumire: "Coroană dentară standard din Zirconiu/ dinte",
-        cost: "1.700 lei",
+        cost: "1.400 lei",
       },
       {
         nr: 11,
         denumire: "Coroană dentară premium din Zirconiu/ dinte",
-        cost: "3.000 lei",
+        cost: "1.700 lei",
       },
       {
         nr: 12,
         denumire: "Lucrare de tip All on 4 din Zirconiu",
-        cost: "20.000 lei",
+        cost: "17.000 lei",
       },
     ],
   },
@@ -132,13 +132,13 @@ const priceCategories = [
         nr: 19,
         denumire:
           "Retratament de canal pe dinte monoradicular realizat cu microscop",
-        cost: "1.200 lei",
+        cost: "1.100 lei",
       },
       {
         nr: 20,
         denumire:
           "Retratament de canal pe dinte pluriradicular realizat cu microscop",
-        cost: "1.300 lei",
+        cost: "1.200 lei",
       },
     ],
   },
@@ -148,7 +148,7 @@ const priceCategories = [
       {
         nr: 21,
         denumire: "Extracție molar de minte",
-        cost: "500 lei",
+        cost: "550 lei",
       },
       {
         nr: 22,
