@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { PHONE_DISPLAY } from "../lib/seo";
 
-const formAction = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || "https://formspree.io/f/mykngpgo";
+const formAction = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || "https://formspree.io/f/mlgpdzzd";
 
 export default function ContactForm() {
   const [agreePrivacy, setAgreePrivacy] = useState(false);
